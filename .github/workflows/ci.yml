@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: ["prod"]
+
+jobs:
+  call-workflow:
+    uses: rosalesponcerdev/workflow_repository/.github/workflows/docker-nginx-ci.yml@prod
+    secrets: inherit

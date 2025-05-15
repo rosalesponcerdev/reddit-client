@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <main class="h-dvh w-screen overflow-y-hidden flex">
+      <div id="line-container" class="flex"></div>
+
+      <section class="py-2 px-4" id="add-section">
+        <button class="cursor-pointer text-primary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            s
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+
+        <div
+          id="add-modal"
+          class="fixed top-0 left-0 h-full w-screen bg-black/50 transition-opacity hidden z-10"
+        >
+          <div class="fixed top-1/2 left-1/2 -translate-1/2 p-4 bg-white">
+            <h1>Enter the name of subreddit</h1>
+            <form>
+              <input
+                type="text"
+                class="block my-4 py-2 px-4 w-full border border-black"
+              />
+              <button
+                class="block w-full text-white bg-black py-2 px-4 rounded-sm"
+              >
+                Add Subreddit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
